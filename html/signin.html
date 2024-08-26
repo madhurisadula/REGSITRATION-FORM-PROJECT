@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/signin.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="signin">
+      <h1>Sign in</h1>
+      <input
+        type="email"
+        class="form-control"
+        id="useremail"
+        name="useremail"
+        placeholder="Enter Username"
+      /><br /><br />
+      <input
+        type="password"
+        class="form-control"
+        id="password"
+        name="password"
+        placeholder="Enter Password "
+      /><br /><br />
+      <button type="button" onclick="saveData()" class="btn btn-primary">
+        Sign in
+      </button>
+      
+    </div>
+
+
+    <script>
+      function saveData() {
+        let useremail, password;
+        useremail = document.getElementById("useremail").value;
+        password = document.getElementById("password").value;
+        let data = JSON.parse(localStorage.getItem("users"));
+
+      let ndata =  data.filter((e)=>e.email===useremail && e.password ===password)
+      localStorage.setItem('newdata', JSON.stringify(ndata));
+      window.location.href="profile.html";
+      }
+
+
+    </script>
+  </body>
+</html>

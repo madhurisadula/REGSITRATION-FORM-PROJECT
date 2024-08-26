@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/registration.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=poppins">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+    <div class="form-box">
+    <h1 class="title">Sign Up</h1>
+    <div class="underline"></div>
+   
+    <form id="sign-up">
+        <div class="input-group">
+            <div class="input-field namefield">
+                <i class="fa-solid fa-user"></i>
+            <input type="text" id="name" name="fname"     placeholder="First Name">
+            </div>
+
+            <div class="input-field">
+                <i class="fa-solid fa-at"></i>
+            <input type="email"  id="email" name="email"    placeholder="email">
+            </div>
+
+            <div class="input-field">
+                </i><i class="fa-solid fa-key"></i>
+            <input type="password"  id="password"  name="password" placeholder="password">
+            </div>
+
+            <div class="input-field">
+                </i><i class="fa-solid fa-calendar-alt"></i>
+                <input type="date" id="date" name="date" placeholder="date-of-birth">
+            </div>
+        <p><span class="text">If you have already registerd please login the form </span> <a href="#"> Click Here!</a></p>
+        </div>
+
+        <div class="btn-field">
+            <button type="submit" class="signupbtn">Sign Up</button>
+            <button type="submit"  class="disable signinbtn">Sign in</button>
+            
+
+            <!-- <p>Already have an account? <a href="#">Login</a></p> -->
+        </div>
+        <div class="sub">
+            <button type="button" onclick="saveData()" class="btn btn-primary" id="save_btn">Submit</button>
+            <button type="reset"  class="btn btn-warning" id="save_btn">Reset</button>
+
+        </div>
+    </form>
+
+    </div>
+    </div>
+
+
+    <script src="../js/registration.js"></script>
+
+</body>
+</html>
